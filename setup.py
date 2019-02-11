@@ -13,7 +13,8 @@ setup(name='PayneLabData',
 	license='Apache 2.0',
 	packages=[
 		'PayneLabData',
-		'PayneLabData.CPTAC'
+		'PayneLabData.CPTAC',
+        'PayneLabData.BurkholderiaTimeCourse'
 		],
 	#packages=find_packages(),
 	install_requires=[

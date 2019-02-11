@@ -1,2 +1,3 @@
 include README.md
 include PayneLabData/CPTAC/data/*
+include PayneLabData/BurkholderiaTimeCourse/data/*

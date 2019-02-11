@@ -1,0 +1,150 @@
+LINE 154 : 2019-01-24 12:30:14,201 [INFO    ] Connecting to Enrichr Server to get latest library names
+LINE 208 : 2019-01-24 12:30:14,218 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 396 : 2019-01-24 12:30:14,560 [DEBUG   ] http://amp.pharm.mssm.edu:80 "GET /Enrichr/datasetStatistics HTTP/1.1" 200 None
+LINE 158 : 2019-01-24 12:30:14,625 [INFO    ] Libraries are used: KEGG_2016
+LINE 166 : 2019-01-24 12:30:14,626 [DEBUG   ] Start Enrichr using library: KEGG_2016
+LINE 167 : 2019-01-24 12:30:14,627 [INFO    ] Analysis name: MSI High partition, Enrichr Library: KEGG_2016
+LINE 208 : 2019-01-24 12:30:14,632 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 396 : 2019-01-24 12:30:14,923 [DEBUG   ] http://amp.pharm.mssm.edu:80 "POST /Enrichr/addList HTTP/1.1" 200 47
+LINE 208 : 2019-01-24 12:30:15,935 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 396 : 2019-01-24 12:30:16,398 [DEBUG   ] http://amp.pharm.mssm.edu:80 "GET /Enrichr/export?userListId=16158503&filename=KEGG_2016.MSI%20High%20partition.reports&backgroundType=KEGG_2016 HTTP/1.1" 200 None
+LINE 178 : 2019-01-24 12:30:19,407 [INFO    ] Save file of enrichment results: Job Id:93yc1
+LINE 2491: 2019-01-24 12:30:19,607 [DEBUG   ] update_title_pos
+LINE 1251: 2019-01-24 12:30:19,621 [DEBUG   ] findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=24.0 to DejaVu Sans ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
+LINE 653 : 2019-01-24 12:30:19,631 [DEBUG   ] Assigning font /b'F1' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf'
+LINE 1251: 2019-01-24 12:30:19,654 [DEBUG   ] findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=bold:stretch=normal:size=24.0 to DejaVu Sans ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf') with score of 0.000000.
+LINE 1251: 2019-01-24 12:30:19,671 [DEBUG   ] findfont: Matching :family=STIXGeneral:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to STIXGeneral ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneral.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,675 [DEBUG   ] findfont: Matching :family=STIXGeneral:style=italic:variant=normal:weight=normal:stretch=normal:size=10.0 to STIXGeneral ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralItalic.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,677 [DEBUG   ] findfont: Matching :family=STIXGeneral:style=normal:variant=normal:weight=bold:stretch=normal:size=10.0 to STIXGeneral ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBol.ttf') with score of 0.000000.
+LINE 1251: 2019-01-24 12:30:19,680 [DEBUG   ] findfont: Matching :family=STIXNonUnicode:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to STIXNonUnicode ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUni.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,683 [DEBUG   ] findfont: Matching :family=STIXNonUnicode:style=italic:variant=normal:weight=normal:stretch=normal:size=10.0 to STIXNonUnicode ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniIta.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,685 [DEBUG   ] findfont: Matching :family=STIXNonUnicode:style=normal:variant=normal:weight=bold:stretch=normal:size=10.0 to STIXNonUnicode ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBol.ttf') with score of 0.000000.
+LINE 1251: 2019-01-24 12:30:19,688 [DEBUG   ] findfont: Matching :family=STIXSizeOneSym:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to STIXSizeOneSym ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymReg.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,692 [DEBUG   ] findfont: Matching :family=STIXSizeTwoSym:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to STIXSizeTwoSym ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymReg.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,694 [DEBUG   ] findfont: Matching :family=STIXSizeThreeSym:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to STIXSizeThreeSym ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymReg.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,697 [DEBUG   ] findfont: Matching :family=STIXSizeFourSym:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to STIXSizeFourSym ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymReg.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,700 [DEBUG   ] findfont: Matching :family=STIXSizeFiveSym:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to STIXSizeFiveSym ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFiveSymReg.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,703 [DEBUG   ] findfont: Matching :family=cmsy10:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to cmsy10 ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,706 [DEBUG   ] findfont: Matching :family=cmr10:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to cmr10 ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/cmr10.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,707 [DEBUG   ] findfont: Matching :family=cmtt10:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to cmtt10 ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/cmtt10.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,710 [DEBUG   ] findfont: Matching :family=cmmi10:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to cmmi10 ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/cmmi10.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,712 [DEBUG   ] findfont: Matching :family=cmb10:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to cmb10 ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/cmb10.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,714 [DEBUG   ] findfont: Matching :family=cmss10:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to cmss10 ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,716 [DEBUG   ] findfont: Matching :family=cmex10:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to cmex10 ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/cmex10.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,717 [DEBUG   ] findfont: Matching :family=DejaVu Sans:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,718 [DEBUG   ] findfont: Matching :family=DejaVu Sans:style=italic:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Oblique.ttf') with score of 0.150000.
+LINE 1251: 2019-01-24 12:30:19,719 [DEBUG   ] findfont: Matching :family=DejaVu Sans:style=normal:variant=normal:weight=bold:stretch=normal:size=10.0 to DejaVu Sans ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf') with score of 0.000000.
+LINE 1251: 2019-01-24 12:30:19,720 [DEBUG   ] findfont: Matching :family=DejaVu Sans Mono:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans Mono ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono.ttf') with score of 0.050000.
+LINE 1251: 2019-01-24 12:30:19,722 [DEBUG   ] findfont: Matching :family=DejaVu Sans Display:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans Display ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansDisplay.ttf') with score of 0.050000.
+LINE 653 : 2019-01-24 12:30:19,923 [DEBUG   ] Assigning font /b'F2' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf'
+LINE 703 : 2019-01-24 12:30:19,995 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf.
+LINE 710 : 2019-01-24 12:30:19,995 [DEBUG   ] Writing TrueType font.
+LINE 703 : 2019-01-24 12:30:20,024 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf.
+LINE 710 : 2019-01-24 12:30:20,024 [DEBUG   ] Writing TrueType font.
+LINE 2491: 2019-01-24 12:30:20,059 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:20,088 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:20,105 [DEBUG   ] update_title_pos
+LINE 653 : 2019-01-24 12:30:20,118 [DEBUG   ] Assigning font /b'F1' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf'
+LINE 653 : 2019-01-24 12:30:20,139 [DEBUG   ] Assigning font /b'F2' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf'
+LINE 703 : 2019-01-24 12:30:20,220 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf.
+LINE 710 : 2019-01-24 12:30:20,220 [DEBUG   ] Writing TrueType font.
+LINE 703 : 2019-01-24 12:30:20,245 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf.
+LINE 710 : 2019-01-24 12:30:20,245 [DEBUG   ] Writing TrueType font.
+LINE 193 : 2019-01-24 12:30:20,290 [INFO    ] Done.
+
+LINE 154 : 2019-01-24 12:30:20,291 [INFO    ] Connecting to Enrichr Server to get latest library names
+LINE 208 : 2019-01-24 12:30:20,292 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 396 : 2019-01-24 12:30:20,576 [DEBUG   ] http://amp.pharm.mssm.edu:80 "GET /Enrichr/datasetStatistics HTTP/1.1" 200 None
+LINE 158 : 2019-01-24 12:30:20,639 [INFO    ] Libraries are used: KEGG_2016
+LINE 166 : 2019-01-24 12:30:20,641 [DEBUG   ] Start Enrichr using library: KEGG_2016
+LINE 167 : 2019-01-24 12:30:20,642 [INFO    ] Analysis name: MSI Normal partition, Enrichr Library: KEGG_2016
+LINE 208 : 2019-01-24 12:30:20,648 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 396 : 2019-01-24 12:30:22,211 [DEBUG   ] http://amp.pharm.mssm.edu:80 "POST /Enrichr/addList HTTP/1.1" 200 47
+LINE 208 : 2019-01-24 12:30:23,215 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 396 : 2019-01-24 12:30:24,015 [DEBUG   ] http://amp.pharm.mssm.edu:80 "GET /Enrichr/export?userListId=16158504&filename=KEGG_2016.MSI%20Normal%20partition.reports&backgroundType=KEGG_2016 HTTP/1.1" 200 None
+LINE 178 : 2019-01-24 12:30:27,029 [INFO    ] Save file of enrichment results: Job Id:93yc2
+LINE 2491: 2019-01-24 12:30:27,111 [DEBUG   ] update_title_pos
+LINE 653 : 2019-01-24 12:30:27,127 [DEBUG   ] Assigning font /b'F1' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf'
+LINE 653 : 2019-01-24 12:30:27,151 [DEBUG   ] Assigning font /b'F2' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf'
+LINE 703 : 2019-01-24 12:30:27,229 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf.
+LINE 710 : 2019-01-24 12:30:27,229 [DEBUG   ] Writing TrueType font.
+LINE 703 : 2019-01-24 12:30:27,254 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf.
+LINE 710 : 2019-01-24 12:30:27,254 [DEBUG   ] Writing TrueType font.
+LINE 2491: 2019-01-24 12:30:27,285 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:27,319 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:27,338 [DEBUG   ] update_title_pos
+LINE 653 : 2019-01-24 12:30:27,353 [DEBUG   ] Assigning font /b'F1' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf'
+LINE 653 : 2019-01-24 12:30:27,378 [DEBUG   ] Assigning font /b'F2' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf'
+LINE 703 : 2019-01-24 12:30:27,468 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf.
+LINE 710 : 2019-01-24 12:30:27,468 [DEBUG   ] Writing TrueType font.
+LINE 703 : 2019-01-24 12:30:27,510 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf.
+LINE 710 : 2019-01-24 12:30:27,510 [DEBUG   ] Writing TrueType font.
+LINE 193 : 2019-01-24 12:30:27,569 [INFO    ] Done.
+
+LINE 154 : 2019-01-24 12:30:31,705 [INFO    ] Connecting to Enrichr Server to get latest library names
+LINE 208 : 2019-01-24 12:30:31,707 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 396 : 2019-01-24 12:30:32,001 [DEBUG   ] http://amp.pharm.mssm.edu:80 "GET /Enrichr/datasetStatistics HTTP/1.1" 200 None
+LINE 158 : 2019-01-24 12:30:32,063 [INFO    ] Libraries are used: KEGG_2016
+LINE 166 : 2019-01-24 12:30:32,064 [DEBUG   ] Start Enrichr using library: KEGG_2016
+LINE 167 : 2019-01-24 12:30:32,064 [INFO    ] Analysis name: MSI High partition, Enrichr Library: KEGG_2016
+LINE 208 : 2019-01-24 12:30:32,065 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 396 : 2019-01-24 12:30:32,627 [DEBUG   ] http://amp.pharm.mssm.edu:80 "POST /Enrichr/addList HTTP/1.1" 200 47
+LINE 208 : 2019-01-24 12:30:33,631 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 396 : 2019-01-24 12:30:34,080 [DEBUG   ] http://amp.pharm.mssm.edu:80 "GET /Enrichr/export?userListId=16158506&filename=KEGG_2016.MSI%20High%20partition.reports&backgroundType=KEGG_2016 HTTP/1.1" 200 None
+LINE 178 : 2019-01-24 12:30:37,089 [INFO    ] Save file of enrichment results: Job Id:93yc4
+LINE 2491: 2019-01-24 12:30:37,157 [DEBUG   ] update_title_pos
+LINE 653 : 2019-01-24 12:30:37,169 [DEBUG   ] Assigning font /b'F1' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf'
+LINE 653 : 2019-01-24 12:30:37,188 [DEBUG   ] Assigning font /b'F2' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf'
+LINE 703 : 2019-01-24 12:30:37,264 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf.
+LINE 710 : 2019-01-24 12:30:37,264 [DEBUG   ] Writing TrueType font.
+LINE 703 : 2019-01-24 12:30:37,289 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf.
+LINE 710 : 2019-01-24 12:30:37,289 [DEBUG   ] Writing TrueType font.
+LINE 2491: 2019-01-24 12:30:37,319 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:37,348 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:37,365 [DEBUG   ] update_title_pos
+LINE 653 : 2019-01-24 12:30:37,377 [DEBUG   ] Assigning font /b'F1' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf'
+LINE 653 : 2019-01-24 12:30:37,396 [DEBUG   ] Assigning font /b'F2' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf'
+LINE 703 : 2019-01-24 12:30:37,473 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf.
+LINE 710 : 2019-01-24 12:30:37,473 [DEBUG   ] Writing TrueType font.
+LINE 703 : 2019-01-24 12:30:37,500 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf.
+LINE 710 : 2019-01-24 12:30:37,500 [DEBUG   ] Writing TrueType font.
+LINE 193 : 2019-01-24 12:30:37,538 [INFO    ] Done.
+
+LINE 154 : 2019-01-24 12:30:37,539 [INFO    ] Connecting to Enrichr Server to get latest library names
+LINE 208 : 2019-01-24 12:30:37,540 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 396 : 2019-01-24 12:30:38,006 [DEBUG   ] http://amp.pharm.mssm.edu:80 "GET /Enrichr/datasetStatistics HTTP/1.1" 200 None
+LINE 158 : 2019-01-24 12:30:38,068 [INFO    ] Libraries are used: KEGG_2016
+LINE 166 : 2019-01-24 12:30:38,068 [DEBUG   ] Start Enrichr using library: KEGG_2016
+LINE 167 : 2019-01-24 12:30:38,069 [INFO    ] Analysis name: MSI Normal partition, Enrichr Library: KEGG_2016
+LINE 208 : 2019-01-24 12:30:38,070 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 396 : 2019-01-24 12:30:38,832 [DEBUG   ] http://amp.pharm.mssm.edu:80 "POST /Enrichr/addList HTTP/1.1" 200 47
+LINE 208 : 2019-01-24 12:30:39,835 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 396 : 2019-01-24 12:30:40,349 [DEBUG   ] http://amp.pharm.mssm.edu:80 "GET /Enrichr/export?userListId=16158508&filename=KEGG_2016.MSI%20Normal%20partition.reports&backgroundType=KEGG_2016 HTTP/1.1" 200 None
+LINE 178 : 2019-01-24 12:30:43,360 [INFO    ] Save file of enrichment results: Job Id:93yc6
+LINE 2491: 2019-01-24 12:30:43,511 [DEBUG   ] update_title_pos
+LINE 653 : 2019-01-24 12:30:43,545 [DEBUG   ] Assigning font /b'F1' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf'
+LINE 653 : 2019-01-24 12:30:43,576 [DEBUG   ] Assigning font /b'F2' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf'
+LINE 703 : 2019-01-24 12:30:43,657 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf.
+LINE 710 : 2019-01-24 12:30:43,657 [DEBUG   ] Writing TrueType font.
+LINE 703 : 2019-01-24 12:30:43,681 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf.
+LINE 710 : 2019-01-24 12:30:43,681 [DEBUG   ] Writing TrueType font.
+LINE 2491: 2019-01-24 12:30:43,714 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:43,748 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:43,767 [DEBUG   ] update_title_pos
+LINE 653 : 2019-01-24 12:30:43,782 [DEBUG   ] Assigning font /b'F1' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf'
+LINE 653 : 2019-01-24 12:30:43,807 [DEBUG   ] Assigning font /b'F2' = '/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf'
+LINE 703 : 2019-01-24 12:30:43,885 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf.
+LINE 710 : 2019-01-24 12:30:43,885 [DEBUG   ] Writing TrueType font.
+LINE 703 : 2019-01-24 12:30:43,910 [DEBUG   ] Embedding font /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf.
+LINE 710 : 2019-01-24 12:30:43,911 [DEBUG   ] Writing TrueType font.
+LINE 193 : 2019-01-24 12:30:43,949 [INFO    ] Done.
+
+LINE 2491: 2019-01-24 12:30:44,180 [DEBUG   ] update_title_pos
+LINE 1251: 2019-01-24 12:30:44,311 [DEBUG   ] findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=bold:stretch=normal:size=32.0 to DejaVu Sans ('/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf') with score of 0.000000.
+LINE 2491: 2019-01-24 12:30:44,351 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:44,387 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:44,411 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:44,746 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:44,915 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:44,948 [DEBUG   ] update_title_pos
+LINE 2491: 2019-01-24 12:30:44,969 [DEBUG   ] update_title_pos
