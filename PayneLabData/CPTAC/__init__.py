@@ -52,46 +52,17 @@ dataframes.
 """
 print("Loading CPTAC data:")
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-data_directory = dir_path + os.sep + "data" + os.sep
+local_path = os.path.dirname(os.path.realpath(__file__)) + os.sep + 'data' + os.sep
 
 print("Loading Dictionary...")
 dict = {}
-file = open(data_directory + "definitions.txt", "r")
+file = open(local_path + "definitions.txt", "r")
 
 for line in file:
     line = line.strip()
     line = line.split("\t")
     dict[line[0]] = line[1]
 file.close()
-
-print("Loading Clinical Data...")
-clinical = DataFrameLoader(data_directory + "clinical.txt").createDataFrame()
-
-print("Loading Proteomics Data...")
-proteomics = DataFrameLoader(data_directory + "proteomics.cct.gz").createDataFrame()
-
-print("Loading Transcriptomics Data...")
-transcriptomics = DataFrameLoader(data_directory + "transcriptomics_linear.cct.gz").createDataFrame()
-transcriptomics_circular = DataFrameLoader(data_directory + "transcriptomics_circular.cct.gz").createDataFrame()
-miRNA = DataFrameLoader(data_directory + "miRNA.cct.gz").createDataFrame()
-
-print("Loading CNA Data...")
-cna = DataFrameLoader(data_directory + "CNA.cct.gz").createDataFrame()
-
-print("Loading Phosphoproteomics Data...")
-phosphoproteomics = DataFrameLoader(data_directory + "phosphoproteomics_site.cct.gz").createDataFrame()
-phosphoproteomics_gene = DataFrameLoader(data_directory + "phosphoproteomics_gene.cct.gz").createDataFrame()
-
-print("Loading Somatic Mutation Data...")
-somatic_binary = DataFrameLoader(data_directory + "somatic.cbt.gz").createDataFrame()
-somatic_binary.name = "somatic binary"
-somatic_unparsed = pd.read_csv(data_directory + "somatic.maf.gz", sep = "\t")
-somatic_unparsed.name = "somatic MAF unparsed"
-somatic_maf = DataFrameLoader(data_directory + "somatic.maf.gz").createDataFrame()
-patient_ids = create_patient_ids(clinical)
-somatic_maf = link_patient_ids(patient_ids, somatic_maf)
-somatic_maf.name = "somatic MAF"
 
 
 #metaData = MetaData(clinical)
@@ -138,6 +109,10 @@ def search(term):
     url = "https://www.google.com/search?q=" + term
     print("Searching for", term, "in web browser...")
     webbrowser.open(url)
+    
+def get_remote_file(file_path):
+    pass
+
 def get_clinical():
     """
     Parameters
@@ -146,7 +121,17 @@ def get_clinical():
     Returns
     Clincal dataframe
     """
-    return clinical
+    filename = 'clinical.txt'
+    local_path=os.path.dirname(os.path.realpath(__file__)) + os.sep + 'data' + os.sep
+    remote_path='box.com/PayneLabData/endo/data/'
+    df = None
+    
+    if not os.path.isfile(local_path + filename):
+        get_remote_file(remote_path + filename)
+    #if the checksums are unequal, download the remote file and check again
+    #   if it does this a couple times and still fails the checksum, throw an error
+    df = DataFrameLoader(local_path + filename).createDataFrame()
+    return df
 def get_proteomics():
     """
     Parameters
@@ -155,7 +140,15 @@ def get_proteomics():
     Returns
     proteomics dataframe
     """
-    return proteomics
+    filename = 'proteomics.cct.gz'
+    local_path=os.path.dirname(os.path.realpath(__file__)) + os.sep + 'data' + os.sep
+    remote_path='box.com/PayneLabData/endo/data/'
+    df = None
+    
+    if not os.path.isfile(local_path + filename):
+        get_remote_file(remote_path + filename)
+    df = DataFrameLoader(local_path + filename).createDataFrame()
+    return df
 def get_transcriptomics(circular = False, miRNA = False):
     """
     Parameters
@@ -166,10 +159,35 @@ def get_transcriptomics(circular = False, miRNA = False):
     Transcriptomics dataframe
     """
     if circular:
-        return transcriptomics_circular
-    if miRNA:
-        return miRNA
-    return transcriptomics
+        filename = 'transcriptomics_circular.cct.gz'
+        local_path=os.path.dirname(os.path.realpath(__file__)) + os.sep + 'data' + os.sep
+        remote_path='box.com/PayneLabData/endo/data/'
+        df = None
+    
+        if not os.path.isfile(local_path + filename):
+            get_remote_file(remote_path + filename)
+        df = DataFrameLoader(local_path + filename).createDataFrame()
+        return df
+    elif miRNA:
+        filename = 'miRNA.cct.gz'
+        local_path=os.path.dirname(os.path.realpath(__file__)) + os.sep + 'data' + os.sep
+        remote_path='box.com/PayneLabData/endo/data/'
+        df = None
+        
+        if not os.path.isfile(local_path + filename):
+            get_remote_file(remote_path + filename)
+        df = DataFrameLoader(local_path + filename).createDataFrame()
+        return df
+    else:
+        filename = 'transcriptomics_linear.cct.gz'
+        local_path=os.path.dirname(os.path.realpath(__file__)) + os.sep + 'data' + os.sep
+        remote_path='box.com/PayneLabData/endo/data/'
+        df = None
+        
+        if not os.path.isfile(local_path + filename):
+            get_remote_file(remote_path + filename)
+        df = DataFrameLoader(local_path + filename).createDataFrame()
+        return df
 def get_CNA():
     """
     Parameters
@@ -178,7 +196,15 @@ def get_CNA():
     Returns
     CNA dataframe
     """
-    return cna
+    filename = 'CNA.cct.gz'
+    local_path=os.path.dirname(os.path.realpath(__file__)) + os.sep + 'data' + os.sep
+    remote_path='box.com/PayneLabData/endo/data/'
+    df = None
+    
+    if not os.path.isfile(local_path + filename):
+        get_remote_file(remote_path + filename)
+    df = DataFrameLoader(local_path + filename).createDataFrame()
+    return df
 def get_phosphoproteomics(gene_level = False):
     """
     Parameters
@@ -188,8 +214,25 @@ def get_phosphoproteomics(gene_level = False):
     Phosphoproteomics dataframe
     """
     if gene_level:
-        return phosphoproteomics_gene
-    return phosphoproteomics
+        filename = 'phosphoproteomics_gene.cct.gz'
+        local_path=os.path.dirname(os.path.realpath(__file__)) + os.sep + 'data' + os.sep
+        remote_path='box.com/PayneLabData/endo/data/'
+        df = None
+        
+        if not os.path.isfile(local_path + filename):
+            get_remote_file(remote_path + filename)
+        df = DataFrameLoader(local_path + filename).createDataFrame()
+        return df
+    else:
+        filename = 'phosphoproteomics_site.cct.gz'
+        local_path=os.path.dirname(os.path.realpath(__file__)) + os.sep + 'data' + os.sep
+        remote_path='box.com/PayneLabData/endo/data/'
+        df = None
+        
+        if not os.path.isfile(local_path + filename):
+            get_remote_file(remote_path + filename)
+        df = DataFrameLoader(local_path + filename).createDataFrame()
+        return df
 def get_phosphosites(gene):
     """Returns dataframe with all phosphosites of specified gene name"""
     return Utilities().get_phosphosites(phosphoproteomics, gene)
@@ -205,10 +248,40 @@ def get_somatic(binary=False, unparsed=False):
     Somatic mutations dataframe corresponding with parameters provided
     """
     if binary:
-        return somatic_binary
-    if unparsed:
-        return somatic_unparsed
-    return somatic_maf
+        filename = 'somatic.cbt.gz'
+        local_path=os.path.dirname(os.path.realpath(__file__)) + os.sep + 'data' + os.sep
+        remote_path='box.com/PayneLabData/endo/data/'
+        df = None
+        
+        if not os.path.isfile(local_path + filename):
+            get_remote_file(remote_path + filename)
+        df = DataFrameLoader(local_path + filename).createDataFrame()
+        df.name = 'somatic binary'
+        return df
+    elif unparsed:
+        filename = 'somatic.maf.gz'
+        local_path=os.path.dirname(os.path.realpath(__file__)) + os.sep + 'data' + os.sep
+        remote_path='box.com/PayneLabData/endo/data/'
+        df = None
+        
+        if not os.path.isfile(local_path + filename):
+            get_remote_file(remote_path + filename)
+        df = pd.read_csv(local_path + filename, sep='\t')
+        df.name='somatic MAF unparsed'
+        return df
+    else:
+        filename = 'somatic.maf.gz'
+        local_path=os.path.dirname(os.path.realpath(__file__)) + os.sep + 'data' + os.sep
+        remote_path='box.com/PayneLabData/endo/data/'
+        df = None
+        
+        if not os.path.isfile(local_path + filename):
+            get_remote_file(remote_path + filename)
+        df = DataFrameLoader(local_path + filename).createDataFrame()
+        patient_ids = create_patient_ids(clinical)
+        df = link_patient_ids(patient_ids, df)
+        df.name = "somatic MAF"
+        return df
 def get_clinical_cols():
     """
     Parameters
@@ -419,3 +492,30 @@ def version():
     with open(dir_path + '/version.py') as fp:
     	exec(fp.read(), version)
     return(version['__version__'])
+
+
+
+print("Loading Clinical Data...")
+clinical = get_clinical()
+
+print("Loading Proteomics Data...")
+proteomics = get_proteomics()
+
+print("Loading Transcriptomics Data...")
+transcriptomics = get_transcriptomics()
+transcriptomics_circular = get_transcriptomics(circular=True)
+miRNA = get_transcriptomics(miRNA=True)
+
+print("Loading CNA Data...")
+cna = get_CNA()
+
+print("Loading Phosphoproteomics Data...")
+phosphoproteomics = get_phosphoproteomics()
+phosphoproteomics_gene = get_phosphoproteomics(gene_level=True)
+
+print("Loading Somatic Mutation Data...")
+somatic_binary = get_somatic(binary=True)
+somatic_unparsed = get_somatic(unparsed=True)
+somatic_maf = get_somatic()
+
+patient_ids = create_patient_ids(clinical)

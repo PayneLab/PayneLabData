@@ -63,21 +63,22 @@ for line in file:
 file.close()
 
 print("Loading Burkholderia data...")
-bthai_raw = DataFrameLoader(data_directory + "Bthai_Norm_Ref_Names.xlsx").createDataFrame()
-bthai_no_glucose = [bthai_raw.iloc[:,5:9],
-                    bthai_raw.iloc[:,9:13],
-                    bthai_raw.iloc[:,13:17],
-                    bthai_raw.iloc[:,17:21],
-                    bthai_raw.iloc[:,21:25]]
+raw_data = DataFrameLoader(data_directory + "Bthai_Norm_Ref_Names.xlsx").createDataFrame()
+no_glucose = [raw_data.iloc[:,5:9],
+                    raw_data.iloc[:,9:13],
+                    raw_data.iloc[:,13:17],
+                    raw_data.iloc[:,17:21],
+                    raw_data.iloc[:,21:25]]
+
 #bthai_no_glucose_means = bthai_no_glucose[0].mean(axis=1).merge(
 #                            [bthai_no_glucose[1].mean(axis=1),
 #                            bthai_no_glucose[2].mean(axis=1),
 #                            bthai_no_glucose[3].mean(axis=1)])
-bthai_glucose = [bthai_raw.iloc[:,25:29],
-                    bthai_raw.iloc[:,29:33],
-                    bthai_raw.iloc[:,33:37],
-                    bthai_raw.iloc[:,37:41],
-                    bthai_raw.iloc[:,41:45]]
+glucose = [raw_data.iloc[:,25:29],
+                    raw_data.iloc[:,29:33],
+                    raw_data.iloc[:,33:37],
+                    raw_data.iloc[:,37:41],
+                    raw_data.iloc[:,41:45]]
 
 #metaData = MetaData(clinical)
 #molecularData = MolecularData(proteomics, transcriptome, cna, phosphoproteomics)
@@ -307,71 +308,22 @@ def get_gene_mapping():
 def convert(snp_or_sap):
     #TODO implement
     return Utilities().convert(snp_or_sap)
-def compare_gene(df1, df2, gene):
-    """
-    Parameters
-    df1: omics dataframe (proteomics) to be selected from
-    df2: other omics dataframe (transcriptomics) to be selected from
-    gene: gene or array of genes to select from each of the dataframes
-
-    Returns
-    Dataframe containing two columns (or number of genes provided times two). Each column is the data for the specified gene from the two specified dataframes
-    """
-    if isinstance(gene, str): #simple way to check for single gene string
-        return Utilities().compare_gene(df1, df2, gene)
-    else: #if not single gene string, then assuming an array was provided
-        return Utilities().compare_genes(df1, df2, gene)
-def compare_mutations(omics_data, omics_gene, mutations_gene = None):
-    """
-    Params
-    omics_data: omics dataframe (i.e. proteomics, phosphoproteomics, transcriptomics)
-    omics_gene: gene to select from omics data (used for somatic data if somatic_gene is left blank)
-    mutations_gene: gene to select from somatic mutation data
-
-    Returns
-    Dataframe containing two columns, the omics data and the somatic mutation type for the gene(s) provided
-    """
-    if mutations_gene:
-        return Utilities().merge_mutations_trans(omics_data, omics_gene, somatic_maf, mutations_gene)
-    else:
-        return Utilities().merge_mutations(omics_data, somatic_maf, omics_gene)
-def compare_mutations_full(omics_data, omics_gene, mutations_gene = None):
-    """
-    Params
-    omics_data: omics dataframe (i.e. proteomics, phosphoproteomics, transcriptomics)
-    omics_gene: gene to select from omics data (used for somatic data if somatic_gene is left blank)
-    mutations_gene: gene to select from somatic mutation data
-
-    Returns
-    Dataframe containing numeric omics data and categorical somatic data (including patient ID, mutation type, and mutation location)
-    """
-    if mutations_gene:
-        return Utilities().merge_mutations_trans(omics_data, omics_gene, somatic_maf, mutations_gene, duplicates = True)
-    else:
-        return Utilities().merge_mutations(omics_data, somatic_maf, omics_gene, duplicates = True)
-def compare_clinical(omics_data, clinical_col):
-    """
-    Parameters
-    data: omics data for clinical data to be appended with
-    clinical_col: column in clinical dataframe to be inserted into provided omics data
-
-    Returns
-    Dataframe with specified column from clinical dataframe added to specified dataframe (i.e., proteomics) for comparison and easy plotting
-    """
-    #TODO: do we need clinical parameter? Could just grab it from loaded data?
-    return Utilities().compare_clinical(clinical, omics_data, clinical_col)
-def compare_phosphosites(gene):
-    """
-    Parameters
-    gene: proteomics gene to query phosphoproteomics dataframe
-
-    Searches for any phosphosites on the gene provided
-
-    Returns
-    Dataframe with a column from proteomics for the gene specified, as well as columns for all phosphoproteomics columns beginning with the specified gene
-    """
-    return Utilities().compare_phosphosites(proteomics, phosphoproteomics, gene)
-
+def get_means(dataframe_list):
+    means_df = pd.DataFrame()
+    means_df['Protein'] = dataframe_list[0].index
+    column_names = ['Protein']
+    i = 1
+    for dataframe in dataframe_list:
+        means_df = pd.concat([means_df, dataframe.mean(axis=1)], axis=1, sort=True)
+        column_names.append('mean' + str(i))
+        i = i + 1
+    means_df.columns = column_names
+    means_df.drop_na(inplace=True)
+    return means_df
+    
+def melt_time_points(dataframe):
+    return pd.melt(dataframe, id_vars=['Protein'], value_vars=['mean1','mean2','mean3','mean4','mean5'], var_name='time_point')
+    
 def help():
     """
     Parameters
