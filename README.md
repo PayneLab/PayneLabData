@@ -6,7 +6,7 @@ This repository holds all data published by the Payne Lab, and methods for acces
 	<li>CPTAC: This project is intended to facilitate accessing and interacting with cancer data from the NIH. Currently, the dataset available is from a series of endometrial cancer studies. These cancer studies are downloadable via our Python package as native dataframe objects from the pandas package and can therefore be integrated very quickly and easily with other Python-based data analysis tools.</li>
 	<li>EndometrialCancer</li>
 	<li>FabricatedData</li>
-<ul> 
+</ul> 
 
 ## Tutorials
 Tutorials are located within the <code>doc</code> folder in each individual project directory. They are Python-based Jupyter notebooks tutorials intended to provide a cookbook of basic methods of interacting with the data.
